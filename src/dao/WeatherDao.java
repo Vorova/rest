@@ -1,11 +1,14 @@
 package dao;
 
-import dto.WeatherDto;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import dto.WeatherDaysDto;
+import dto.WeatherTodayDto;
 
 import java.time.LocalDate;
 
 public interface WeatherDao {
 
-    WeatherDto getWeatherByDate(LocalDate date);
+    WeatherTodayDto getWeatherByDate(LocalDate date);
 
+    WeatherDaysDto getWeatherForDays(int days);
 }

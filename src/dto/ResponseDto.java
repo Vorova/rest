@@ -9,6 +9,6 @@ import lombok.Data;
 public class ResponseDto<T> {
 
     private ResponseStatus status;
-    private T value;
+    private T response;
 
 }

@@ -2,14 +2,12 @@ package dto;
 
 import com.fasterxml.jackson.annotation.JsonSetter;
 import lombok.Data;
-import lombok.ToString;
 
 @Data
-@ToString
-public class WeatherDto {
+public class WeatherDaysDto {
 
     @JsonSetter("location")
-    private LocationDto locationDto;
+    private LocationDto location;
 
     @JsonSetter("forecast")
     private ForecastDto forecastDto;

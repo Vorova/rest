@@ -1,11 +1,13 @@
 package service;
 
-import dto.WeatherDto;
+import dto.WeatherDaysDto;
+import dto.WeatherTodayDto;
 
 import java.time.LocalDate;
 
 public interface WeatherService {
 
-    WeatherDto getWeatherByDate(LocalDate localDate);
+    WeatherTodayDto getWeatherByDate(LocalDate localDate);
+    WeatherDaysDto getWeatherForDays(int days);
 
 }

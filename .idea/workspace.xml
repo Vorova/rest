@@ -9,24 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c000d89f-ab76-43eb-8078-a5c1f361bb4f" name="Changes" comment="init commit">
-      <change afterPath="$PROJECT_DIR$/src/dao/WeatherDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/impl/WeatherDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dto/DayDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dto/ForecastDayDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dto/ForecastDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dto/HourDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dto/LocationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dto/ResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dto/WeatherDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dto/WeatherHourDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/ResponseStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/WeatherService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/impl/WeatherServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/rest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/rest.xml" afterDir="false" />
+    <list default="true" id="c000d89f-ab76-43eb-8078-a5c1f361bb4f" name="Changes" comment="add servlet api/get">
+      <change afterPath="$PROJECT_DIR$/src/dto/WeatherDaysDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/WeatherDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/WeatherDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/impl/WeatherDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/impl/WeatherDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/ResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dto/ResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/WeatherDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dto/WeatherTodayDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/WeatherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/impl/WeatherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/impl/WeatherServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -204,7 +196,7 @@
       <updated>1696944871233</updated>
       <workItem from="1696944872169" duration="9737000" />
       <workItem from="1696959434031" duration="982000" />
-      <workItem from="1696960435839" duration="15400000" />
+      <workItem from="1696960435839" duration="18782000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -230,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696946002362</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add servlet api/get">
+      <option name="closed" value="true" />
+      <created>1696998849179</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696998849179</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +239,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
+    <MESSAGE value="add servlet api/get" />
+    <option name="LAST_COMMIT_MESSAGE" value="add servlet api/get" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
