@@ -9,14 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c000d89f-ab76-43eb-8078-a5c1f361bb4f" name="Changes" comment="add servlet api/get">
-      <change afterPath="$PROJECT_DIR$/src/dto/WeatherDaysDto.java" afterDir="false" />
+    <list default="true" id="c000d89f-ab76-43eb-8078-a5c1f361bb4f" name="Changes" comment="division into queries">
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/view/weather.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/rest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/rest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/WeatherDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/WeatherDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/impl/WeatherDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/impl/WeatherDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dto/ResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dto/ResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dto/WeatherDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dto/WeatherTodayDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/ForecastDayDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dto/ForecastDayDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/HourDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dto/HourDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/WeatherDaysDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dto/WeatherDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/WeatherHourDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/WeatherTodayDto.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/WeatherService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/impl/WeatherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/impl/WeatherServiceImpl.java" afterDir="false" />
     </list>
@@ -30,6 +36,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -38,6 +45,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.ideaLibSources/jackson-databind-2.15.2-sources.jar!/com/fasterxml/jackson/databind/ObjectMapper.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/glassfish/web/jakarta.servlet.jsp.jstl/3.0.0/jakarta.servlet.jsp.jstl-3.0.0.jar!/META-INF/c.tld" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/glassfish/web/jakarta.servlet.jsp.jstl/3.0.0/jakarta.servlet.jsp.jstl-3.0.0.jar!/org/apache/taglibs/standard/tag/rt/core/ForEachTag.class" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -64,6 +73,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path": "C:\\Users\\vvvor\\IdeaProjects\\rest",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -74,15 +84,17 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/vvvor/.m2/repository/com/fasterxml/jackson",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/vvvor/IdeaProjects/rest/web/WEB-INF/lib/jakarta.servlet.jsp.jstl-2.0.0.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.17078917",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
+    "project.structure.proportion": "0.17848411",
+    "project.structure.side.proportion": "0.35849056",
+    "settings.editor.selected.configurable": "File.Encoding",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -91,6 +103,13 @@
       <recent name="dto" />
       <recent name="entity" />
       <recent name="dao" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vvvor\IdeaProjects\rest\web\WEB-INF\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vvvor\IdeaProjects\rest\web\WEB-INF" />
+      <recent name="C:\Users\vvvor\IdeaProjects\rest\web\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -179,7 +198,6 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="MakeProject" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="rest" />
         </option>
@@ -196,7 +214,8 @@
       <updated>1696944871233</updated>
       <workItem from="1696944872169" duration="9737000" />
       <workItem from="1696959434031" duration="982000" />
-      <workItem from="1696960435839" duration="18782000" />
+      <workItem from="1696960435839" duration="35623000" />
+      <workItem from="1697031811334" duration="6487000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -230,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696998849179</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="division into queries">
+      <option name="closed" value="true" />
+      <created>1697002516461</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697002516461</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +267,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init commit" />
     <MESSAGE value="add servlet api/get" />
-    <option name="LAST_COMMIT_MESSAGE" value="add servlet api/get" />
+    <MESSAGE value="division into queries" />
+    <option name="LAST_COMMIT_MESSAGE" value="division into queries" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -251,5 +279,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

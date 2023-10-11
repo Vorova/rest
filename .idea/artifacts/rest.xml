@@ -11,6 +11,8 @@
           <element id="library" level="project" name="projectlombok.lombok" />
           <element id="library" level="project" name="fasterxml.jackson.core.databind" />
           <element id="library" level="project" name="fasterxml.jackson.datatype.jsr310" />
+          <element id="library" level="project" name="glassfish.web.jakarta.servlet.jsp.jstl" />
+          <element id="library" level="project" name="jakarta.servlet.jsp.jstl.api" />
         </element>
       </element>
     </root>

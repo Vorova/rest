@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 import lombok.Data;
 
 @Data
-public class WeatherDaysDto {
+public class WeatherDto {
 
     @JsonSetter("location")
     private LocationDto location;
