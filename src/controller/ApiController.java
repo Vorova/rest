@@ -1,8 +1,6 @@
 package controller;
 
-import dto.ResponseDto;
-import dto.WeatherDaysDto;
-import dto.WeatherTodayDto;
+import dto.WeatherDto;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -12,10 +10,7 @@ import service.WeatherService;
 import service.impl.WeatherServiceImpl;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.time.LocalDate;
-
-import static enums.ResponseStatus.OK;
 
 @WebServlet("/api/get")
 public class ApiController extends HttpServlet {
@@ -26,6 +21,7 @@ public class ApiController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         int days;
+        WeatherDto weather;
 
         try {
             days = Integer.parseInt(request.getParameter("d"));
@@ -33,15 +29,12 @@ public class ApiController extends HttpServlet {
             days = 0;
         }
 
-        if (days != 0) {
-            WeatherDaysDto weather = weatherService.getWeatherForDays(days);
-            PrintWriter writer = response.getWriter();
-            writer.write(String.valueOf(new ResponseDto<>(OK, weather)));
-        } else {
-            WeatherTodayDto weather = weatherService.getWeatherByDate(LocalDate.now());
-            PrintWriter writer = response.getWriter();
-            writer.write(String.valueOf(new ResponseDto<>(OK, weather)));
-        }
+        weather = days != 0 ?
+                weatherService.getWeatherForDays(days) :
+                weatherService.getWeatherByDate(LocalDate.now());
 
+        getServletContext().setAttribute("weather", weather);
+        request.setAttribute("weather", weather);
+        request.getRequestDispatcher("/view/weather.jsp").forward(request, response);
     }
 }

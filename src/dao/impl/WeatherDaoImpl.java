@@ -4,8 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dao.WeatherDao;
-import dto.WeatherDaysDto;
-import dto.WeatherTodayDto;
+import dto.WeatherDto;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,18 +29,18 @@ public class WeatherDaoImpl implements WeatherDao {
     }
 
     @Override
-    public WeatherTodayDto getWeatherByDate(LocalDate date) {
+    public WeatherDto getWeatherByDate(LocalDate date) {
         try {
-            return mapper.readValue(getResultByUrl(getFullUrlForFuture(date)), WeatherTodayDto.class);
+            return mapper.readValue(getResultByUrl(getFullUrlForFuture(date)), WeatherDto.class);
         } catch (JsonProcessingException e) {
             throw new RuntimeException();
         }
     }
 
     @Override
-    public WeatherDaysDto getWeatherForDays(int days) {
+    public WeatherDto getWeatherForDays(int days) {
         try {
-            return mapper.readValue(getResultByUrl(getFullUrlForForecast(days)), WeatherDaysDto.class);
+            return mapper.readValue(getResultByUrl(getFullUrlForForecast(days)), WeatherDto.class);
         } catch (JsonProcessingException e) {
             throw new RuntimeException();
         }
@@ -62,6 +61,7 @@ public class WeatherDaoImpl implements WeatherDao {
             }
             return content.toString();
         } catch (IOException exception) {
+            System.out.println(exception.getMessage());
             throw new RuntimeException();
         }
     }
