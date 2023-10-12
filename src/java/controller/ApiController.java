@@ -12,11 +12,23 @@ import service.impl.WeatherServiceImpl;
 import java.io.IOException;
 import java.time.LocalDate;
 
+/**
+ * Эндпоинт API запроса /get
+ * Данный эндпоинт получает со стороннего сервиса информацию о погоде и отправляет
+ * полученную информацию в ServletContext для дальнейшего вывода информации
+ */
 @WebServlet("/get")
 public class ApiController extends HttpServlet {
 
     private final WeatherService weatherService = new WeatherServiceImpl();
 
+    /**
+     * Handler for get request
+     * @param request request
+     * @param response response
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

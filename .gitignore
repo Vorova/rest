@@ -5,6 +5,8 @@ out/
 !**/src/test/**/out/
 rest.iml
 
+/web/WEB-INF/lib/
+
 ### Eclipse ###
 .apt_generated
 .classpath
