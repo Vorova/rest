@@ -30,5 +30,9 @@
     <orderEntry type="library" exported="" name="jakarta.servlet.jsp.api" level="project" />
     <orderEntry type="library" exported="" name="jakarta.servlet.jsp.jstl.api" level="project" />
     <orderEntry type="library" exported="" name="glassfish.web.jakarta.servlet.jsp.jstl" level="project" />
+    <orderEntry type="library" exported="" name="junit.jupiter.api" level="project" />
+    <orderEntry type="library" exported="" name="junit.jupiter.engine" level="project" />
+    <orderEntry type="library" exported="" name="assertj.core" level="project" />
+    <orderEntry type="library" exported="" name="mockito.junit.jupiter" level="project" />
   </component>
 </module>

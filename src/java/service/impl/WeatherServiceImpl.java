@@ -19,13 +19,13 @@ import java.time.LocalDate;
  */
 public class WeatherServiceImpl implements WeatherService {
 
-    private final WeatherDao weatherDao;
+    private WeatherDao weatherDao;
 
     /**
      * Маппер. <br>
      * Данный маппер преобразует строковые значения в объекты.
      */
-    private final ObjectMapper mapper;
+    private ObjectMapper mapper;
 
     /**
      * Конструктор. <br>
@@ -50,6 +50,7 @@ public class WeatherServiceImpl implements WeatherService {
      */
     @Override
     public WeatherDto getWeatherByDate(LocalDate date) throws JsonProcessingException {
+        if(date == null) throw new NullPointerException("Date cannot be null");
         String result = weatherDao.getWeatherByDate(date);
         return mapper.readValue(result, WeatherDto.class);
     }
